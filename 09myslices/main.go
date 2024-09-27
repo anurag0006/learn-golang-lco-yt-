@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	fmt.Println("Hello from slices!")
@@ -19,6 +21,20 @@ func main() {
 	fmt.Println(fruitList)
 
 
-	
+	// Removing from slicee:
+
+	var courses = make([]string, 3)	
+	courses[0] = "ma101"
+	courses[1] = "js"
+	courses[2] = "react"
+	fmt.Println(courses)
+
+	var index int = 1
+
+	courses = append(courses[:index],courses[index+1:]...)
+    fmt.Println(courses)
+
+
+
 
 }
